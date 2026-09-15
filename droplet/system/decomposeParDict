@@ -17,13 +17,13 @@ FoamFile
 
 //For parallel calculations
 
-numberOfSubdomains 4;
+numberOfSubdomains 14;
 
 method          ptscotch; //simple;
 
 simpleCoeffs
 {
-    n               (2 2 1);
+    n               (7 7 1);
     delta           0.001;
 }
 

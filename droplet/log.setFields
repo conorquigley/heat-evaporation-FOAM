@@ -1,0 +1,46 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _e5c6ccc3-20250814 OPENFOAM=2412 patch=250814 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : setFields
+Date   : Sep 15 2026
+Time   : 12:27:53
+Host   : Freya
+PID    : 47992
+I/O    : uncollated
+Case   : /home/conor/droplets/heat-evaporation/heat-evaporation-FOAM/droplet
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From static Foam::IOstreamOption::compressionType Foam::IOstreamOption::compressionEnum(const Foam::word&, compressionType)
+    in file db/options/IOstreamOption.C at line 189
+    Unknown compression specifier 'uncompressed' using compression off
+Create mesh for time = 0
+
+Reading setFieldsDict
+
+Setting volume field default values
+    - set internal values of volScalarField: alpha.water = 0
+    - set internal values of volVectorField: U = (0 0 0)
+    - set internal values of volScalarField: p_rgh = 0
+
+Setting field region values
+
+    Adding cells with centres within cylinder, with point1 = (0 0 -0.0015), point2 = (0 5.625e-05 -0.0015), radius = 0.003
+    Selected 4330/313600 cells
+    - set internal values of volScalarField: alpha.water = 1
+    - set internal values of volVectorField: U = (0 0 0)
+
+End
+

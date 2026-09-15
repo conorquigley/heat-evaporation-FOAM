@@ -14,7 +14,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-convertToMeters 1;
+scale 1;
 
 // Create a square domain 18x18 mm. y-dimension is removed by "empty" condition. Change y length so it is equal to the side of one cell (0.0018 / number of cells in z).
 

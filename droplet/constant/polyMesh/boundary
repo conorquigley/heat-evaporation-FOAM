@@ -1,14 +1,15 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-  =========                 |
-  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
-   \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  7
-     \\/     M anipulation  |
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
     format      ascii;
+    arch        "LSB;label=32;scalar=64";
     class       polyBoundaryMesh;
     location    "constant/polyMesh";
     object      boundary;
@@ -20,21 +21,21 @@ FoamFile
     top
     {
         type            patch;
-        nFaces          161;
-        startFace       51520;
+        nFaces          980;
+        startFace       625900;
     }
     bottom
     {
         type            patch;
-        nFaces          161;
-        startFace       51681;
+        nFaces          980;
+        startFace       626880;
     }
     sideRight
     {
         type            cyclic;
-        inGroups        List<word> 1(cyclic);
-        nFaces          161;
-        startFace       51842;
+        inGroups        1(cyclic);
+        nFaces          320;
+        startFace       627860;
         matchTolerance  0.0001;
         transform       unknown;
         neighbourPatch  sideLeft;
@@ -42,9 +43,9 @@ FoamFile
     sideLeft
     {
         type            cyclic;
-        inGroups        List<word> 1(cyclic);
-        nFaces          161;
-        startFace       52003;
+        inGroups        1(cyclic);
+        nFaces          320;
+        startFace       628180;
         matchTolerance  0.0001;
         transform       unknown;
         neighbourPatch  sideRight;
@@ -52,9 +53,9 @@ FoamFile
     frontback
     {
         type            empty;
-        inGroups        List<word> 1(empty);
-        nFaces          51842;
-        startFace       52164;
+        inGroups        1(empty);
+        nFaces          627200;
+        startFace       628500;
     }
 )
 
