@@ -16,46 +16,45 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-5
+6
 (
     top
     {
         type            patch;
         nFaces          980;
-        startFace       625900;
+        startFace       638464;
     }
     bottom
     {
         type            patch;
-        nFaces          980;
-        startFace       626880;
+        nFaces          854;
+        startFace       639444;
     }
     sideRight
     {
-        type            cyclic;
-        inGroups        1(cyclic);
+        type            patch;
         nFaces          320;
-        startFace       627860;
-        matchTolerance  0.0001;
-        transform       unknown;
-        neighbourPatch  sideLeft;
+        startFace       640298;
     }
     sideLeft
     {
-        type            cyclic;
-        inGroups        1(cyclic);
+        type            patch;
         nFaces          320;
-        startFace       628180;
-        matchTolerance  0.0001;
-        transform       unknown;
-        neighbourPatch  sideRight;
+        startFace       640618;
     }
     frontback
     {
         type            empty;
         inGroups        1(empty);
-        nFaces          627200;
-        startFace       628500;
+        nFaces          612020;
+        startFace       640938;
+    }
+    dropletSurface
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          5424;
+        startFace       1252958;
     }
 )
 

@@ -17,7 +17,7 @@ FoamFile
 
 //Just dummy entries, don't worry
 
-application     icoFoam;
+application     laplacianFoam;
 
 startFrom       startTime;
 
@@ -25,9 +25,9 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         50;
+endTime         5;
 
-deltaT          1;
+deltaT          0.005;
 
 writeControl    timeStep;
 

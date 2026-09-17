@@ -61,8 +61,7 @@ boundary
 
     sideRight
     {
-    	type cyclic;
-    	neighbourPatch sideLeft;
+    	type patch; 
     	faces
     	(
      		(1 2 6 5)
@@ -71,8 +70,7 @@ boundary
     
     sideLeft
     {
-    	type cyclic;
-    	neighbourPatch sideRight;
+    	type patch;
     	faces
     	(
      		(0 4 7 3)
