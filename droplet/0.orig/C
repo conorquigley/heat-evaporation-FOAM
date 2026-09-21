@@ -20,23 +20,38 @@ internalField   uniform 273;
 
 boundaryField
 {
-    "(patch1|patch3)"
-    {
-        type            zeroGradient;
-    }
-
-    patch2
+    dropletSurface
     {
         type            fixedValue;
-        value           uniform 273;
+        value           uniform $Csat;   // saturation vapour concentration at the droplet surface temperature
     }
 
-    patch4
+    bottom
+    {
+        type            zeroGradient;    // dry substrate outside the droplet footprint: impermeable, no vapour flux into the solid
+    }
+
+    top
     {
         type            fixedValue;
-        value           uniform 573;
+        value           uniform $Cinf;   // far-field ambient concentration — domain is wide enough here to stand in for infinity
+    }
+
+    sideLeft
+    {
+        type            fixedValue;
+        value           uniform $Cinf;
+    }
+
+    sideRight
+    {
+        type            fixedValue;
+        value           uniform $Cinf;
+    }
+
+    frontback
+    {
+        type            empty;           // 2D pseudo-domain, no physical BC needed
     }
 }
-
-
 // ************************************************************************* //

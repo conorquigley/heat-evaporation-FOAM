@@ -1,0 +1,10 @@
+log*
+**/constant/polyMesh/
+**/constant/triSurface/
+processor*/
+postProcessing/
+*.foam
+
+0.*
+!0.orig/
+[1-9]*

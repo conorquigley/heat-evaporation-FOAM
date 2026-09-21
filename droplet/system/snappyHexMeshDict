@@ -39,6 +39,7 @@ castellatedMeshControls
 
     features
     (
+	{ file "dropletCap.eMesh"; level 2; }
     );
 
     refinementSurfaces
@@ -52,7 +53,7 @@ castellatedMeshControls
         }
     }
 
-    resolveFeatureAngle 30;
+    resolveFeatureAngle 60;
 
     refinementRegions
     {
@@ -65,14 +66,21 @@ castellatedMeshControls
     locationInMesh (0.01 0.000028125 0.005);
 
     allowFreeStandingZoneFaces true;
+
+    refinementLevelCoeffs
+    {
+	nRefinementIterations 2;
+        refinement3D false;
+        refinementDirections (1 0 1);
+    }
 }
 
 snapControls
 {
     nSmoothPatch    3;
     tolerance       2.0;
-    nSolveIter      30;
-    nRelaxIter      5;
+    nSolveIter      10;
+    nRelaxIter      3;
 
     nFeatureSnapIter 10;
     implicitFeatureSnap false;
@@ -108,8 +116,8 @@ meshQualityControls
     maxBoundarySkewness     20;
     maxInternalSkewness     4;
     maxConcave              80;
-    minVol                  1e-13;
-    minTetQuality           1e-9;
+    minVol                  1e-20;
+    minTetQuality           1e-15;
     minArea                 -1;
     minTwist                0.02;
     minDeterminant          0.001;
