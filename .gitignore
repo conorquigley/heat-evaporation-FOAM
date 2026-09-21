@@ -1,6 +1,7 @@
 log*
-**/constant/polyMesh/
-**/constant/triSurface/
+**/constant/polyMesh/*
+**/constant/triSurface/*
+**/constant/extendedFeatureEdgeMesh/*
 processor*/
 postProcessing/
 *.foam
