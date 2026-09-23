@@ -4,7 +4,7 @@ import numpy as np
 a          = 0.003      # contact radius [m]
 theta_deg  = 80.0        # contact angle [deg]
 y_thick    = 0.00005625  # domain thickness in y (from your blockMeshDict)
-n_circ     = 120         # points around the FULL circle (increase for smoother arc)
+n_circ     = 2360         # points around the FULL circle (increase for smoother arc)
 overhang_y = 0.00001     # how far the extrusion pokes past y bounds each side
 outfile    = "dropletCap.stl"
 # ----------------------------------------------------
