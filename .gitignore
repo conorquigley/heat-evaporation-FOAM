@@ -5,6 +5,8 @@ log*
 processor*/
 postProcessing/
 *.foam
+*.stl
+*.emesh
 
 0.*
 !0.orig/
