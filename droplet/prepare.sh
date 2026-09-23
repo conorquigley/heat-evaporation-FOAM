@@ -8,9 +8,6 @@ mv dropletCap.stl constant/triSurface/
 
 blockMesh &> log.blockMesh
 surfaceFeatureExtract &> log.surfaceFeatureExtract
-snappyHexMesh &> log.snappyHexMesh
-# -----------------------------
-# Prepare 0 file for initial conditions
-# -----------------------------
-cp -r 0.orig 0
-
+snappyHexMesh -overwrite  &> log.snappyHexMesh
+createPatch &> log.createPatch
+extrudeMesh &> log.extrudeMesh
