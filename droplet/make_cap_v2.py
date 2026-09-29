@@ -1,16 +1,16 @@
 import numpy as np
 
 # ---- EDIT THESE for your actual droplet/domain ----
-R          = 0.003      # radius [m]
-theta_deg  = 45        # contact angle [deg]
+R          = 0.003      # contact radius [m]
+theta_deg  = 45.0        # contact angle [deg]
 y_thick    = 0.00005625  # domain thickness in y (from your blockMeshDict)
-n_circ     = 13700         # points around the FULL circle (increase for smoother arc)
+n_circ     = 2360         # points around the FULL circle (increase for smoother arc)
 overhang_y = 0.00001     # how far the extrusion pokes past y bounds each side
 outfile    = "dropletCap.stl"
 # ----------------------------------------------------
 
 theta = np.radians(theta_deg)
-a   = R * np.sin(theta) # contact radius
+a   = R * np.sin(theta)
 zc  = -R * np.cos(theta)   # circle centre height (can be +/- of substrate)
 
 phi = np.linspace(0, 2*np.pi, n_circ, endpoint=False)
