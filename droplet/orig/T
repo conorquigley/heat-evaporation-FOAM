@@ -14,10 +14,10 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [1 -2 0 0 0 0 0];
+dimensions      [1 -3 0 0 0 0 0];
 
-Csat            0.0173;  // kg/m^3
-Cinf            0.0086;  // kg/m^3
+Csat            1;  // kg/m^3
+Cinf            0;  // kg/m^3
 
 internalField   uniform $Cinf;
 

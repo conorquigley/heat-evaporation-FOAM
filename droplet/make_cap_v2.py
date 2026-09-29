@@ -1,16 +1,16 @@
 import numpy as np
 
 # ---- EDIT THESE for your actual droplet/domain ----
-a          = 0.003      # contact radius [m]
-theta_deg  = 80.0        # contact angle [deg]
+R          = 0.003      # radius [m]
+theta_deg  = 45        # contact angle [deg]
 y_thick    = 0.00005625  # domain thickness in y (from your blockMeshDict)
-n_circ     = 2360         # points around the FULL circle (increase for smoother arc)
+n_circ     = 13700         # points around the FULL circle (increase for smoother arc)
 overhang_y = 0.00001     # how far the extrusion pokes past y bounds each side
 outfile    = "dropletCap.stl"
 # ----------------------------------------------------
 
 theta = np.radians(theta_deg)
-R   = a / np.sin(theta)
+a   = R * np.sin(theta) # contact radius
 zc  = -R * np.cos(theta)   # circle centre height (can be +/- of substrate)
 
 phi = np.linspace(0, 2*np.pi, n_circ, endpoint=False)
@@ -59,5 +59,5 @@ with open(outfile, "w") as f:
     f.write("endsolid dropletCap\n")
 
 print(f"Wrote {len(triangles)} triangles to {outfile}")
-print(f"R={R:.6f} m, circle centre z={zc:.6f} m")
+print(f"a={a:.6f} m, circle centre z={zc:.6f} m")
 print(f"Portion above z=0 is your cap; below z=0 is discarded automatically.")
