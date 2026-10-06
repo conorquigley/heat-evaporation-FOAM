@@ -1,6 +1,10 @@
 #!/bin/bash
-set -e
-rm -r constant/polyMesh
+#set -e
+rm constant/polyMesh/*
+rm constant/triSurface/*
+rm constant/extend*/*
+rm log*
+
 
 python3 make_cap_v2.py
 mkdir -p constant/triSurface
