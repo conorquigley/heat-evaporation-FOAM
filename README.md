@@ -50,5 +50,4 @@ To reset the case and start again from scratch:
 | Droplet radius | [0.003m] | `droplet/make_cap_v2.py` |
 | Contact angle | [45 deg ] | `droplet/make_cap_v2.py` |
 | Diffusivity | [2.42x10^-5] | `droplet/constant/transportProperties` |
-| Time step, end time | [ ] | `droplet/system/controlDict` |
-| Cores | [ ] | `droplet/system/decomposeParDict` |
+| Time step, end time | [0.1,30 s] | `droplet/system/controlDict` |
