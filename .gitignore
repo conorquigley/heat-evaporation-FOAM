@@ -1,13 +1,9 @@
-log*
+log.*
 **/constant/polyMesh/*
 **/constant/triSurface/*
 **/constant/extendedFeatureEdgeMesh/*
 processor*/
 postProcessing/
-*.foam
-*.stl
-*.emesh
-
-0.*
-!0.orig/
-[1-9]*
+droplet/[0-9]*/
+.venv/
+__pycache__/
