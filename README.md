@@ -13,10 +13,11 @@ The droplet directory contains all that is required to recreate the simulation.
 
 ## Quick start
 
-
+```bash
 cd droplet
 ./prepare.sh   # generate geometry and mesh, set up the case
 ./run.sh       # run the simulation
+```
 
 To view the results, open `droplet/droplet.foam` in ParaView
 
